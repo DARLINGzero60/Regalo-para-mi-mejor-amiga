@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffdee9, #b5fffc);
+      font-family: 'Segoe UI', cursive;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #ff4d6d;
+      margin-top: 40px;
+      animation: fadein 2s ease-in-out;
+    }
+
+    .mensaje {
+      width: 85%;
+      max-width: 650px;
+      margin: 30px auto;
+      background: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      padding: 30px;
+      font-size: 1.4em;
+      color: #6c5ce7;
+      text-align: center;
+      line-height: 1.6;
+      animation: slideUp 2s ease forwards;
+    }
+
+    .final {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #fd79a8;
+      font-weight: bold;
+      animation: fadein 3s ease-in;
+    }
+
+    .corazon {
+      position: absolute;
+      top: -50px;
+      width: 40px;
+      height: 40px;
+      background: url('https://em-content.zobj.net/thumbs/240/apple/354/sparkling-heart_1f496.png') no-repeat center;
+      background-size: contain;
+      animation: flotando 7s infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes flotando {
+      0% { top: -50px; transform: translateX(0); }
+      50% { top: 50vh; transform: translateX(60px); }
+      100% { top: 100vh; transform: translateX(-40px); opacity: 0; }
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💗 ERES ESPECIAL PARA MÍ 💗</h1>
+
+  <div class="mensaje">
+    NO SEAS MIGAJERA 😜 <br>
+    SIEMPRE ESTARÉ PARA TI, NO IMPORTA LO QUE PASE 💪 <br>
+    SIEMPRE TE APOYA 💌
+    
+    <div class="final">
+      NUNCA DEJES QUE NADIE APAGUE ESE BRILLO DE TUS OJOS ✨
+    </div>
+  </div>
+
+  <!-- Música personalizada -->
+  <audio controls autoplay loop>
+    <source src="https://tu-enlace-directo.com/tu-cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio 😢
+  </audio>
+
+  <!-- Corazones flotantes -->
+  <div class="corazon" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="corazon" style="left: 40%; animation-delay: 2s;"></div>
+  <div class="corazon" style="left: 70%; animation-delay: 4s;"></div>
+  <div class="corazon" style="left: 90%; animation-delay: 6s;"></div>
+
+</body>
+</html>
