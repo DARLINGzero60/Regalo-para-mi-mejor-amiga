@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para la estrella más brillante</title>
+  <style>
+    body {
+      background-color: #1a0000;
+      font-family: 'Georgia', serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .envelope {
+      perspective: 1000px;
+    }
+
+    .card {
+      background-color: #b30000;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+      width: 90vw;
+      max-width: 500px;
+      padding: 2rem;
+      transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      transition: transform 1.2s;
+      backface-visibility: hidden;
+    }
+
+    .open .card {
+      transform: rotateY(0deg);
+    }
+
+    .card-content p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card-content strong {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #fff0f0;
+    }
+
+    .signature {
+      margin-top: 2rem;
+      text-align: right;
+      font-style: italic;
+      font-weight: bold;
+      color: #ffdddd;
+    }
+
+    .button {
+      margin-top: 1.5rem;
+      padding: 10px 20px;
+      border: none;
+      background-color: white;
+      color: #b30000;
+      border-radius: 10px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3abf67c34d.mp3?filename=romantic-piano-110058.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="envelope" id="envelope">
+    <div class="card" id="card">
+      <div class="card-content">
+        <p><strong>Dicen que la belleza está en el interior, pero tus ojos son la prueba de que a veces, el alma se asoma por la ventana.</strong></p>
+
+        <p>
+          Tus ojos son dos luceros,<br>
+          dos mares de luz y calma,<br>
+          dos ventanas sinceras<br>
+          donde brilla el alma.
+        </p>
+        <p>
+          No son solo miradas,<br>
+          son versos, son canciones,<br>
+          son cálidos atardeceres<br>
+          y dulces ilusiones.
+        </p>
+        <p>
+          Si el cielo prestó sus estrellas<br>
+          para formar tu mirar,<br>
+          no hay noche que no alumbre<br>
+          cuando empiezas a hablar.
+        </p>
+        <p>
+          Tus ojos, mi amiga,<br>
+          son mi refugio y mi paz,<br>
+          un par de soles que guardo<br>
+          donde el tiempo no pasará.
+        </p>
+        <p>
+          Porque en ellos encuentro<br>
+          la risa, el amor y el arte,<br>
+          y sé que, mientras me mires,<br>
+          nada me podrá faltarte.
+        </p>
+
+        <div class="signature">Con cariño, Darling</div>
+
+        <button class="button" onclick="resetCard()">Volver a leer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+    envelope.addEventListener('click', () => {
+      envelope.classList.add('open');
+    });
+
+    function resetCard() {
+      envelope.classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
